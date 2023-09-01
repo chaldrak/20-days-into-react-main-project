@@ -1,14 +1,12 @@
-import ImageCard from "../assets/default-course.png";
-
-const BaseCard = () => {
+const BaseCard = ({ title, cover, description }) => {
   return (
     <div className="card-container">
       <div className="card-header">
-        <img src={ImageCard} alt="Image Card" />
+        <img src={cover} alt="Image Card" />
       </div>
       <div className="card-body">
-        <h1>React JS</h1>
-        <p>20 Days into React js</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </div>
     </div>
   );

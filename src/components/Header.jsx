@@ -1,4 +1,5 @@
 import ReactLogo from "../assets/react.svg";
+import { MENU } from "../constants";
 
 const Header = () => {
   return (
@@ -7,18 +8,11 @@ const Header = () => {
         <img src={ReactLogo} alt="React Logo" />
       </a>
       <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">About Us</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
+        {MENU.map((item) => (
+          <li key={item.name}>
+            <a href={item.href}>{item.name}</a>
+          </li>
+        ))}
       </ul>
     </header>
   );
